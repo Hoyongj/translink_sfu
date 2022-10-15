@@ -17,6 +17,18 @@ def get_data(stop_id) -> bs4.BeautifulSoup:
     res = BeautifulSoup(r.content,'xml')
     return res
 
+def time_to_leave(soup) -> list:
+    '''
+    parameter: soup `response`\n
+    return: list of int `ExpectedCountdown`
+    '''
+    bus_time_lst = []
+    bus_lst = soup.find_all('NextBus')
+    for bus in bus_lst:
+        sch = bus.find('Schedule')
+        bus_time_lst += [int(time_left_to_leave = sch.find("ExpectedCountdown").text)]
+    return bus_time_lst
+
 if __name__ == "__main__":
     stop_bay2 = 52806 # SFU Transportation Centre @ Bay 2-1
     stop_bay2 = 53096 # SFU Transportation Centre @ Bay 2-2

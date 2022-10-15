@@ -4,11 +4,14 @@ We estimated arrival time using Transit API.
 
 ## Installation
 
+
+OS: window
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install SFU-campus-time-estimation.
 
 ```bash
 pip install beautifulsoup4
 pip install requests
+pip install lxml
 ```
 
 ## Usage

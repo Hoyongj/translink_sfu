@@ -25,10 +25,10 @@ def time_to_leave(soup) -> list:
     bus_time_lst = []
     bus_lst = soup.find_all('NextBus')
     for bus in bus_lst:
-        bus_num = bus.find('RouteNo').text
-        sch = bus.find('Schedule')
-        next_time = int(sch.find("ExpectedCountdown").text)
-        bus_time_lst += [[bus_num,next_time]]
+        bus_set = {}
+        bus_set["bus_num"] = bus.find('RouteNo').text
+        bus_set["bus_time"] = int(bus.find('Schedule').find("ExpectedCountdown").text)
+        bus_time_lst += [bus_set]
     return bus_time_lst
 
 if __name__ == "__main__":
@@ -40,4 +40,4 @@ if __name__ == "__main__":
     tem_lst = time_to_leave(get_data(stop_bay1))
 
     print("SFU Transit Exchange @ Bay 1")
-    print(f"You need to wait {tem_lst[0][0]} for {tem_lst[0][1]} mins")
+    print(f"You need to wait {tem_lst[0]['bus_num']} for {tem_lst[0]['bus_time']} mins")

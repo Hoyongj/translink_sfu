@@ -7,7 +7,12 @@ root.title("SFU VAN-BUR TRAVEL")
 root.geometry("720x480")
 root.resizable(False,False)
 
-
+# Add image file
+bg = tk.PhotoImage(file = "map.png") # IMAGE FROM GOOGLE MAP
+  
+# Show image using label
+bg_image = tk.Label(root, image = bg)
+bg_image.place(x=0, y=0)
 
 # BUTTON with TXT
 van_to_bur = True

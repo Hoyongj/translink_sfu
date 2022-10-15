@@ -7,7 +7,7 @@ import json
 with open("translink_apikey.txt", 'r') as f:
     api_key = f.read()
 
-def get_translink_data(stop_id) -> bs4.BeautifulSoup:
+def get_data(stop_id) -> bs4.BeautifulSoup:
     '''
     parameter: int `stop_id`\n
     return: soup `Response`
@@ -22,4 +22,4 @@ if __name__ == "__main__":
     stop_bay2 = 53096 # SFU Transportation Centre @ Bay 2-2
     stop_bay1 = 51861 # SFU Transit Exchange @ Bay 1
     with open('Work Space.xml', 'w+', encoding='utf-8') as f:
-        f.write(str(get_translink_data(stop_bay1)))
+        f.write(str(get_data(stop_bay1)))

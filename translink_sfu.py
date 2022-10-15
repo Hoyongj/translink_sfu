@@ -37,4 +37,7 @@ if __name__ == "__main__":
     stop_bay1 = 51861 # SFU Transit Exchange @ Bay 1
     # with open('Work Space.xml', 'w+', encoding='utf-8') as f:
     #     f.write(str(get_data(stop_bay1)))
-    time_to_leave(get_data(stop_bay1))
+    tem_lst = time_to_leave(get_data(stop_bay1))
+
+    print("SFU Transit Exchange @ Bay 1")
+    print(f"You need to wait {tem_lst[0][0]} for {tem_lst[0][1]} mins")

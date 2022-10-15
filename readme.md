@@ -1,6 +1,6 @@
 # SFU-campus-time-estimation
 
-We estimated arrival time using Transit API.
+We estimated travel time between Burnaby campus and Vancouver campus by using Transit API.
 
 ## Installation
 

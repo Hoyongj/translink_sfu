@@ -1,0 +1,11 @@
+bus,start_stop_id,start_name,end_stop_id,end_name
+r5,51374,sfu_van,53096,sfu_bur
+r5,53096,sfu_bur,50978,sfu_van
+r5,52806,sfu_wmc,53096,sfu_asb
+r5,53096,sfu_asb,60015,sfu_wmc
+143,52806,sfu_wmc,52998,sfu_asb
+143,52998,sfu_asb,60015,sfu_wmc
+144,52806,sfu_wmc,52807,sfu_asb
+144,52807,sfu_asb,60015,sfu_wmc
+145,52806,sfu_wmc,51861,sfu_asb
+145,51861,sfu_asb,60015,sfu_wmc

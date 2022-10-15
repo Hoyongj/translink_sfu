@@ -16,21 +16,55 @@ bg_image.place(x=0, y=0)
 
 # BUTTON with TXT
 van_to_bur = True
+
+
 def change_direction():
     global van_to_bur
-    if van_to_bur: 
+    if van_to_bur:
         van_to_bur = False
-        btn['text'] = 'SFU: Bur -> Van'
+        btn_dir['text'] = 'SFU: Bur -> Van'
         bg_image.configure(image=bg_van)
-        bg_image.image=bg_van
+        bg_image.image = bg_van
     else:
         van_to_bur = True
-        btn['text'] = 'SFU: Van -> Bur'
+        btn_dir['text'] = 'SFU: Van -> Bur'
         bg_image.configure(image=bg_bur)
-        bg_image.image=bg_bur
+        bg_image.image = bg_bur
 
-btn = tk.Button(root, text="SFU: Van -> Bur", bg="#CC0633", fg="white", font=('helvetica', 9, 'bold'), command=change_direction)  
-btn.place(x=0, y=0)
+
+btn_dir = tk.Button(root, text="SFU: Van -> Bur", bg="#CC0633", fg="white",
+                font=('helvetica', 9, 'bold'), command=change_direction)
+btn_dir.place(x=0, y=0)
+
+# ESTIMATE interval label
+label_bur = tk.Label(root, text="", bg="#FFFFFF", width=5,height=5)
+label_bur = tk.Label(root, text="", bg="#FFFFFF", width=5,height=5)
+label_bur.place(x=272, y=155)
+
+
+# BUTTON for calculate
+def cal_estimate():
+    global van_to_bur
+    if van_to_bur:
+        # Eastbound W Hastings St @ Granville St
+        soup = translink_sfu.translink_sfu.get_data(51374)
+        bus_lst = translink_sfu.time_to_leave(soup)
+        for bus in bus_lst:
+            if bus['bus_num'] == 'R5':
+                time_left = bus['bus_time']
+    else:
+        # SFU Transportation Centre @ Bay 1
+        soup = translink_sfu.translink_sfu.get_data(60015)
+        bus_lst = translink_sfu.time_to_leave(soup)
+        for bus in bus_lst:
+            if bus['bus_num'] == 'R5':
+                time_left = bus['bus_time']
+
+
+
+btn_dir = tk.Button(root, text="CALCULATE", bg="#CC0633", fg="white",
+                font=('helvetica', 9, 'bold'), command=cal_estimate)
+btn_dir.place(x=720, y=0)
 
 
 # REQUIRED

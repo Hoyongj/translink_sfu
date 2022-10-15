@@ -12,6 +12,7 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install SFU-cam
 pip install beautifulsoup4
 pip install requests
 pip install lxml
+pip install Pillow
 ```
 
 ## Usage

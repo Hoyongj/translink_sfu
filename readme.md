@@ -7,7 +7,6 @@ We estimated arrival time using Transit API.
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Project_name.
 
 ```bash
-pip install geotable
 pip install beautifulsoup4
 pip install requests
 ```

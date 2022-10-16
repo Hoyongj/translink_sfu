@@ -60,7 +60,7 @@ def cal_estimate():
             if bus['bus_num'] == 'R5':
                 label_bur.place(x=272, y=160)
                 time_left = bus['bus_time']
-                interval = f"[{time_left+40},{time_left+60}] minutes"
+                interval = f"[{time_left+42},{time_left+62}] minutes"
                 label_bur.config(text = interval)
     else:
         # SFU Transportation Centre @ Bay 1
@@ -71,7 +71,7 @@ def cal_estimate():
             if bus['bus_num'] == 'R5':
                 label_van.place(x=260, y=260)
                 time_left = bus['bus_time']
-                interval = f"[{time_left+40},{time_left+60}] minutes"
+                interval = f"[{time_left+42},{time_left+62}] minutes"
                 label_van.config(text = interval)
 
 

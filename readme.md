@@ -30,9 +30,16 @@ translink_sfu.time_to_leave(soup) # YIELD {BUS_NAME,BUS_TIME}
 ![](usage_eg.gif)
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Abdullah Naeem
 
-Please make sure to update tests as appropriate.
+Hoyong Jung
+
+Taehyeong Kim
+
+## Limitations of the project
+Even though we tried to catch confidence interval for R5, we could not find appropriate data.
+
+So we assumed the data are normal distributed, but it will actually have gamma ditribution.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

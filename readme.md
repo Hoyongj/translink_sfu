@@ -27,6 +27,8 @@ translink_sfu.get_data(stop_bay1) # YIELD XML output
 translink_sfu.time_to_leave(soup) # YIELD {BUS_NAME,BUS_TIME}
 ```
 
+If you run `main.py`, you can see:
+
 ![](usage_eg.gif)
 
 ## Contributors

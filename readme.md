@@ -22,8 +22,12 @@ import translink_sfu
 
 stop_bay1 = 51861 # SFU Transit Exchange @ Bay 1
 
-translink_sfu.get_data(stop_bay1)
+translink_sfu.get_data(stop_bay1) # YIELD XML output
+
+translink_sfu.time_to_leave(soup) # YIELD {BUS_NAME,BUS_TIME}
 ```
+
+![](usage_eg.gif)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

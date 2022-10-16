@@ -40,8 +40,8 @@ btn_dir.place(x=0, y=0)
 
 # ESTIMATE interval label
 # label_bur = tk.Label(root, text="", bg="#FFFFFF", width=5,height=5)
-label_bur = tk.Label(root, text="", bg="#FFFFFF")
-label_van = tk.Label(root, text="", bg="#FFFFFF")
+label_bur = tk.Label(root, text="", bg="#FFFFFF", wraplength=70)
+label_van = tk.Label(root, text="", bg="#FFFFFF", wraplength=70)
 # pack()
 # pack_forget()
 # label_bur.place(x=272, y=160)
@@ -64,7 +64,7 @@ def cal_estimate():
                 label_bur.config(text = interval)
     else:
         # SFU Transportation Centre @ Bay 1
-        soup = translink_sfu.get_data(53096)
+        soup = translink_sfu.get_data(53096) # 60015 is exact but not working 22 Aug. 15
         bus_lst = translink_sfu.time_to_leave(soup)
         print(bus_lst)
         for bus in bus_lst:

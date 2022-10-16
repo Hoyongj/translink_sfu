@@ -29,7 +29,7 @@ translink_sfu.time_to_leave(soup) # YIELD {BUS_NAME,BUS_TIME}
 
 ![](usage_eg.gif)
 
-## Contributing
+## Contributors
 Abdullah Naeem
 
 Hoyong Jung

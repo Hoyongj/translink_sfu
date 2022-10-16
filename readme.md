@@ -2,10 +2,10 @@
 
 We estimated travel time between Burnaby campus and Vancouver campus by using Transit API.
 
-## Installation
-
+## Dependency
 
 OS: window
+
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install SFU-campus-time-estimation.
 
 ```bash

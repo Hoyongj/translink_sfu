@@ -33,7 +33,7 @@ translink_sfu.time_to_leave(soup) # YIELD {BUS_NAME,BUS_TIME}
 
 If you run `main.py`, you can see:
 
-![](usage_eg.gif)
+![](data/usage_eg.gif)
 
 ## Contributors
 Abdullah Naeem

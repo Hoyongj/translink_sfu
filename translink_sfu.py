@@ -4,7 +4,7 @@ import bs4
 # import json
 
 
-with open("translink_apikey.txt", 'r') as f:
+with open("data/translink_apikey.txt", 'r') as f:
     api_key = f.read()
 
 def get_data(stop_id) -> bs4.BeautifulSoup:

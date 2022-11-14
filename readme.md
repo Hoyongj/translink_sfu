@@ -1,6 +1,10 @@
 # SFU-campus-time-estimation
 
-By using Transit API, We estimated travel time between Burnaby campus and Vancouver campus.
+Using Transit API, We tried to estimate travel time between the Burnaby and Vancouver campuses.
+
+But there was no appropriate dataset for the project.
+
+The statistical method can be applied to overcome the obstacle.
 
 ## Dependency
 
@@ -39,9 +43,8 @@ Hoyong Jung
 Taehyeong Kim
 
 ## Limitations of the project
-Even though we tried to catch confidence interval for R5, we could not find appropriate data.
 
-So we assumed the data are normal distributed, even though it can have different distribution like gamma.
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

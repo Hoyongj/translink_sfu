@@ -9,8 +9,8 @@ root.geometry("720x480")
 root.resizable(False,False)
 
 # ADD bg image
-bg_bur = ImageTk.PhotoImage(Image.open("map_bur.png")) # IMAGE FROM GOOGLE MAP
-bg_van = ImageTk.PhotoImage(Image.open("map_van.png")) # IMAGE FROM GOOGLE MAP
+bg_bur = ImageTk.PhotoImage(Image.open("data/map_bur.png")) # IMAGE FROM GOOGLE MAP
+bg_van = ImageTk.PhotoImage(Image.open("data/map_van.png")) # IMAGE FROM GOOGLE MAP
 bg_image = tk.Label(root, image = bg_bur)
 bg_image.place(x=0, y=0)
 
